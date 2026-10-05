@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Crumb Bakery — Baked Fresh Every Dawn</title>
+<meta name="description" content="Golden Crumb Bakery: sourdough, butter croissants, custom cakes and cookies, baked fresh daily. Order online or visit us. Open 6am–7pm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <svg class="load-mark" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="M32 54V14"/><path d="M32 22 L24 14 M32 22 L40 14 M32 33 L23 25 M32 33 L41 25 M32 44 L24 36 M32 44 L40 36"/></svg>
+  <div class="load-num"><b id="loadNum">0</b>%</div>
+  <div class="load-logo">Proofing the <b>dough…</b></div>
+  <i></i>
+</div>
+<div class="progress" id="progress"></div>
+
+<header class="nav" id="nav">
+  <a href="#home" class="logo"><img class="logo-mark" src="logo.svg" alt="" width="38" height="38"><span>Golden<b>Crumb</b></span></a>
+  <nav id="menu">
+    <a href="#menu-cats">Menu</a>
+    <a href="#gallery">Inside</a>
+    <a href="#bakers">Bakers</a>
+    <a href="#oven">Fresh Today</a>
+    <a href="#club">Bread Club</a>
+    <a href="#contact" class="btn btn-sm magnetic">Order Now</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<!-- HERO -->
+<section class="hero dark" id="home">
+  <div class="slides" id="heroSlides">
+    <div class="sbg active" style="background-image:url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=68')"></div>
+    <div class="sbg" style="background-image:url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1600&q=68')"></div>
+    <div class="sbg" style="background-image:url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=68')"></div>
+    <div class="sbg" style="background-image:url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1600&q=68')"></div>
+  </div>
+  <div class="hero-shade"></div>
+  <canvas class="embers" id="embers"></canvas>
+
+  <div class="hero-content">
+    <p class="eyebrow"><span class="live"></span> Oven's on · Open daily 6am – 7pm</p>
+    <h1 id="heroTitle">
+      <span class="hl" data-t="Baked"></span>
+      <span class="hl" data-t="fresh,"></span>
+      <span class="hl out" data-t="every dawn."></span>
+    </h1>
+    <p class="rotator">Taste the <span id="rot">butter</span><i>|</i></p>
+    <div class="cta">
+      <a href="#contact" class="btn magnetic">Order for Pickup</a>
+      <a href="#menu-cats" class="btn ghost magnetic">Explore the Menu</a>
+    </div>
+  </div>
+
+  <a href="#contact" class="badge-spin magnetic" aria-label="Order now">
+    <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+      <text><textPath href="#circ">ORDER NOW • BAKED DAILY • PICKUP IN 20 MIN • </textPath></text></svg>
+    <span>↗</span>
+  </a>
+
+  <div class="hero-foot">
+    <div class="dots-h" id="heroDots"><button class="active"><i></i><span>Sourdough</span></button><button><i></i><span>Croissants</span></button><button><i></i><span>Cakes</span></button><button><i></i><span>Cookies</span></button></div>
+    <div class="glass-stats"><div><b>40+</b><span>Daily bakes</span></div><div><b>4.9★</b><span>Rated</span></div><div><b>5am</b><span>First loaf</span></div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marq">
+  <div class="mrow"><span>SOURDOUGH ✦ CROISSANTS ✦ CAKES ✦ COOKIES ✦ TARTS ✦ BAGUETTES ✦ COFFEE ✦ SOURDOUGH ✦ CROISSANTS ✦ CAKES ✦ COOKIES ✦ TARTS ✦ BAGUETTES ✦ COFFEE ✦ </span></div>
+  <div class="mrow rev outline"><span>BUTTER ✦ FLOUR ✦ PATIENCE ✦ BUTTER ✦ FLOUR ✦ PATIENCE ✦ BUTTER ✦ FLOUR ✦ PATIENCE ✦ BUTTER ✦ FLOUR ✦ PATIENCE ✦ </span></div>
+</div>
+
+<!-- PINNED STATEMENT -->
+<section class="statement" id="statement">
+  <div class="stick">
+    <p class="eyebrow">Our promise</p>
+    <h2 class="words" id="words">We don't bake for shelves. We bake for mornings. Slow-fermented dough, real butter and nothing you can't pronounce — made by hand, every single day.</h2>
+  </div>
+</section>
+
+<!-- MENU accordion -->
+<section class="section" id="menu-cats">
+  <div class="wrap">
+    <p class="eyebrow reveal">The menu</p>
+    <h2 class="big reveal">Pick your <em class="accent">favourite</em></h2>
+  </div>
+  <div class="acc" id="acc">
+    <article class="panel active" style="background-image:url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1100&q=70')">
+      <span class="pn">01</span><h3 class="vt">Breads</h3>
+      <div class="pc"><h3>Artisan Breads</h3><p>72-hour sourdough, rye, seeded country loaves and crackling baguettes, out of the oven by 6am.</p><a href="#oven" class="btn btn-sm">See bake times</a></div>
+    </article>
+    <article class="panel" style="background-image:url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1100&q=70')">
+      <span class="pn">02</span><h3 class="vt">Pastries</h3>
+      <div class="pc"><h3>Viennoiserie</h3><p>Laminated with 27 layers of cultured butter: croissants, pain au chocolat and cinnamon rolls.</p><a href="#oven" class="btn btn-sm">See bake times</a></div>
+    </article>
+    <article class="panel" style="background-image:url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1100&q=70')">
+      <span class="pn">03</span><h3 class="vt">Cakes</h3>
+      <div class="pc"><h3>Cakes &amp; Celebrations</h3><p>Slices for today or a custom showstopper for the big day. Design yours with our price estimator.</p><a href="#cake" class="btn btn-sm">Design a cake</a></div>
+    </article>
+    <article class="panel" style="background-image:url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1100&q=70')">
+      <span class="pn">04</span><h3 class="vt">Cookies</h3>
+      <div class="pc"><h3>Cookies &amp; Tarts</h3><p>Brown-butter chocolate chunk cookies, fruit tarts and seasonal pies. Warm until we sell out.</p><a href="#contact" class="btn btn-sm">Order a box</a></div>
+    </article>
+    <article class="panel" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=70')">
+      <span class="pn">05</span><h3 class="vt">Coffee</h3>
+      <div class="pc"><h3>Coffee Bar</h3><p>Single-origin espresso and flat whites, poured next to the pastry case. Perfect with anything above.</p><a href="#contact" class="btn btn-sm">Visit us</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- HORIZONTAL GALLERY -->
+<section class="hscroll dark" id="gallery">
+  <div class="hstick">
+    <div class="htitle"><p class="eyebrow">Inside the bakery</p><h2 class="big">Come on<br><em class="accent">in</em> →</h2></div>
+    <div class="htrack" id="htrack">
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=900&q=75" alt="Shelves of fresh baguettes and loaves"><figcaption><b>01</b>The Bread Wall</figcaption></figure>
+      <figure class="tall"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?auto=format&fit=crop&w=800&q=75" alt="Hands shaping dough on a floured counter"><figcaption><b>02</b>Shaped by Hand</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=900&q=75" alt="Pastry display case"><figcaption><b>03</b>The Pastry Case</figcaption></figure>
+      <figure class="tall"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=75" alt="Raspberry cake slice"><figcaption><b>04</b>Cake Counter</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=900&q=75" alt="Basket of mixed breads"><figcaption><b>05</b>Morning Basket</figcaption></figure>
+      <figure class="tall"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1620980776848-84ac10194945?auto=format&fit=crop&w=800&q=75" alt="Fresh fruit tarts"><figcaption><b>06</b>Fruit Tarts</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-sec dark">
+  <div class="wrap statgrid">
+    <div class="stat reveal"><b data-count="1800">0</b><span>Loaves baked weekly</span></div>
+    <div class="stat reveal" style="--d:.1s"><b data-count="27">0</b><span>Butter layers</span></div>
+    <div class="stat reveal" style="--d:.2s"><b data-count="40">0</b><span>Daily bakes</span></div>
+    <div class="stat reveal" style="--d:.3s"><b data-count="12">0</b><span>Years of baking</span></div>
+  </div>
+</section>
+
+<!-- BAKERS -->
+<section class="section" id="bakers">
+  <div class="wrap">
+    <p class="eyebrow reveal">The bakers</p>
+    <h2 class="big reveal">Meet the <em class="accent">hands</em></h2>
+    <div class="tgrid">
+      <div class="tcard reveal"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=75" alt="Sourdough loaves"><div class="tinfo"><h3>Elena Rossi</h3><p>Head Baker · Breads</p><small>Trained in Turin · 18 yrs</small></div></div>
+      <div class="tcard reveal" style="--d:.1s"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=700&q=75" alt="Croissants"><div class="tinfo"><h3>Julien Marchand</h3><p>Viennoiserie</p><small>Paris-trained · 14 yrs</small></div></div>
+      <div class="tcard reveal" style="--d:.2s"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=700&q=75" alt="Layered cake"><div class="tinfo"><h3>Maya Patel</h3><p>Cakes &amp; Pastry</p><small>Wedding cake specialist · 10 yrs</small></div></div>
+      <div class="tcard reveal" style="--d:.3s"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=700&q=75" alt="Cookies"><div class="tinfo"><h3>Sam O'Brien</h3><p>Cookies &amp; Coffee</p><small>Brown-butter obsessive · 7 yrs</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FRESH TODAY -->
+<section class="section dark" id="oven">
+  <div class="wrap">
+    <p class="eyebrow reveal">Fresh from the oven</p>
+    <h2 class="big reveal">Weekly <em class="accent">bake schedule</em></h2>
+    <p class="reveal">Know exactly when your favourites come out. Arrive on time, leave warm.</p>
+    <div class="tabs reveal" id="tabs">
+      <button class="active" data-day="mon">Mon</button><button data-day="tue">Tue</button><button data-day="wed">Wed</button>
+      <button data-day="thu">Thu</button><button data-day="fri">Fri</button><button data-day="sat">Sat</button><button data-day="sun">Sun</button>
+    </div>
+    <div class="sched" id="sched"></div>
+  </div>
+</section>
+
+<!-- BREAD CLUB -->
+<section class="section" id="club">
+  <div class="wrap">
+    <p class="eyebrow reveal">Bread Club</p>
+    <h2 class="big reveal">Fresh bread, <em class="accent">on repeat</em></h2>
+    <p class="reveal">Skip the line. Subscribe and pick up your bake every week, or have it delivered.</p>
+    <div class="billing reveal">
+      <span>Monthly</span><button class="switch" id="billing" aria-label="Toggle prepaid yearly billing"><i></i></button><span>Prepay yearly <em>save 15%</em></span>
+    </div>
+    <div class="cards price">
+      <div class="plan reveal">
+        <h3>Weekly Loaf</h3><div class="amt">$<b data-m="24" data-y="20">24</b><small>/mo</small></div>
+        <ul><li>1 sourdough loaf / week</li><li>Pickup any day</li><li>Pause anytime</li></ul>
+        <a href="#contact" class="btn ghost">Join Weekly Loaf</a>
+      </div>
+      <div class="plan featured reveal" style="--d:.1s">
+        <span class="badge">Most popular</span>
+        <h3>Family Basket</h3><div class="amt">$<b data-m="56" data-y="48">56</b><small>/mo</small></div>
+        <ul><li>2 loaves + 6 croissants / week</li><li>Free coffee on pickup</li><li>10% off cakes</li><li>Seasonal bake surprise</li></ul>
+        <a href="#contact" class="btn">Join Family Basket</a>
+      </div>
+      <div class="plan reveal" style="--d:.2s">
+        <h3>Patisserie Box</h3><div class="amt">$<b data-m="89" data-y="76">89</b><small>/mo</small></div>
+        <ul><li>Everything in Family</li><li>Weekly dessert box</li><li>Free local delivery</li><li>Early access to holiday menu</li></ul>
+        <a href="#contact" class="btn ghost">Join Patisserie</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section quote-sec">
+  <div class="wrap">
+    <p class="eyebrow reveal">Kind words</p>
+    <h2 class="big reveal">Loved by <em class="accent">locals</em></h2>
+    <div class="slider reveal" id="slider">
+      <blockquote class="slide active"><p>“The best croissant I've had outside of Paris. I plan my Saturdays around the 7am batch.”</p><cite>— Priya S.</cite></blockquote>
+      <blockquote class="slide"><p>“They made our wedding cake and it was the first thing to disappear. Beautiful and unbelievably good.”</p><cite>— Tom &amp; Alice W.</cite></blockquote>
+      <blockquote class="slide"><p>“Their sourdough has ruined supermarket bread for me forever. The Bread Club is a no-brainer.”</p><cite>— Rahul M.</cite></blockquote>
+      <div class="dots" id="dots"><button class="active" aria-label="Review 1"></button><button aria-label="Review 2"></button><button aria-label="Review 3"></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAKE ESTIMATOR -->
+<section class="section dark" id="cake">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow reveal">Custom cakes</p>
+      <h2 class="big reveal">Cake <em class="accent">estimator</em></h2>
+      <p class="reveal">Choose a size, flavour and style for an instant price estimate. Our cake team will confirm the design and details with you.</p>
+    </div>
+    <form class="calc reveal" id="cakeForm">
+      <label>Size
+        <select id="size">
+          <option value="45|8">6" round · serves 8</option>
+          <option value="65|14" selected>8" round · serves 14</option>
+          <option value="95|22">10" round · serves 22</option>
+          <option value="140|35">12" round · serves 35</option>
+        </select>
+      </label>
+      <label>Tiers
+        <select id="tiers"><option value="1">Single tier</option><option value="1.8">Two tiers</option><option value="2.6">Three tiers</option></select>
+      </label>
+      <label>Flavour
+        <select id="flavor">
+          <option value="0">Vanilla bean</option><option value="0">Dark chocolate</option><option value="8">Red velvet</option>
+          <option value="10">Lemon &amp; raspberry</option><option value="15">Pistachio &amp; rose</option>
+        </select>
+      </label>
+      <label>Finish
+        <select id="finish"><option value="0">Buttercream</option><option value="12">Fresh flowers</option><option value="20">Gold leaf &amp; drip</option></select>
+      </label>
+      <div class="result">
+        <div class="estimate"><small>Estimated price</small><b id="price">$65</b></div>
+        <p id="calcText">Serves about 14 · ready with 48 hours' notice.</p>
+        <a href="#contact" class="btn" id="orderCake">Order this cake</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section cta-sec dark" id="contact">
+  <div class="cta-bg"></div>
+  <div class="wrap two" style="position:relative">
+    <div>
+      <p class="eyebrow reveal">Order &amp; visit</p>
+      <h2 class="big reveal">Your first coffee<br>is <em class="accent">on us.</em></h2>
+      <p class="reveal">Place a pickup order or request a custom cake. We'll confirm within the hour. Show this page in store for a free coffee with your first order.</p>
+      <p class="reveal info">📍 18 Baker Street, Old Town<br>🕕 Open daily 6am – 7pm<br>📞 +1 (555) 014-2290<br>✉️ hello@goldencrumb.bakery</p>
+    </div>
+    <form class="form reveal" id="form">
+      <input type="text" placeholder="Full name" aria-label="Full name" required>
+      <input type="email" placeholder="Email" aria-label="Email" required>
+      <select id="interest" aria-label="Interest"><option>I'd like to order…</option><option>Bread &amp; pastries</option><option>Custom cake</option><option>Cookie box</option><option>Bread Club</option><option>Catering</option></select>
+      <textarea placeholder="Pickup day, allergies, or cake ideas (optional)" aria-label="Notes" rows="3"></textarea>
+      <button class="btn magnetic" type="submit">Send Order Request</button>
+      <p class="ok" id="ok">✅ Thank you! We'll confirm your order shortly.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <a href="#home" class="logo"><img class="logo-mark" src="logo.svg" alt="" width="38" height="38"><span>Golden<b>Crumb</b></span></a>
+  <p>© 2026 Golden Crumb Bakery. Baked with butter &amp; love.</p>
+  <div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="TikTok">TT</a><a href="#" aria-label="X">X</a><a href="#" aria-label="Facebook">FB</a></div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
